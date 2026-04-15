@@ -1,0 +1,339 @@
+h1,
+h2 {
+  font-family: "Unica One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  /* Responsive font size */
+  font-size: clamp(2.5rem, 6vw, 8rem);
+
+  margin: 0;
+  text-align: center;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  width:80%;
+  /* Responsive paragraph text */
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+
+  line-height: 1.6;
+  margin: 0;
+  text-align:center
+}
+.main_wrapper {
+  margin-top:-80px;
+}
+.hero_content-text {
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  align-content:center;
+  flex-direction:column;
+  gap:16px;
+}
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+.primary-heading {
+  opacity:0;
+  transform: translateY(50px);
+}
+.hero_para {
+   opacity:0;
+  transform: translateY(50px);
+}
+.btn-wrapper {
+  display: flex;
+  gap: 0;
+  color: rgb(0, 0, 0);
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  cursor: pointer;
+}
+.hero .btn-inner {
+    padding: 1rem 2rem;
+    background-color: white;
+}
+
+.side-img {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+.side-img-left {
+    transform: translateX(2px);
+}
+.side-img-right {
+    transform: translateX(-2px);
+}
+.hero_content_image-long img {
+  opacity: 0;
+}
+
+.hero_content_image-long img.anim-done {
+  opacity: 1;
+}
+.hero_content {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  color:white;
+  gap: 24px;
+}
+.long_icon {
+  position: absolute;
+  bottom: 0px;
+  left: 10%;
+}
+.long_icon img {
+  height: 70vh;
+}
+@media (max-width:767px) {
+  .long_icon {
+  position: absolute;
+  bottom: 0px;
+  left: 3%;
+}
+.long_icon img {
+  height: 40vh;
+}
+}
+.hero .full-image {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero .full-image img {
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+}
+.hero_centered_circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.hero_centered_circle svg {
+  width: 48vw;
+}
+@media (max-width:767px) {
+ .hero_centered_circle svg {
+  width: 80vw;
+} 
+}
+
+.hero_content_image-long {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  gap:16px;
+  flex-wrap:wrap;
+}
+.hero_content_image-long img {
+  display: flex;
+  /* width: 100%; */
+  flex-shrink: 1;
+}
+.hero_content_image-long .hero_plus {
+  width:40px;
+}
+@media (max-width:767px) {
+  .hero_content_image-long {
+    gap:8px;
+  }
+  .hero_content_image-long img {
+  display: flex;
+  width: 32px;
+  flex-shrink: 1;
+}
+.hero_content_image-long .hero_plus {
+  width:20px;
+}
+}
+
+
+
+
+
+
+
+/* button hover */
+.side-img-right img {
+    transform: rotate(180deg);
+}
+
+/* All images transition smoothly */
+.side-img img {
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Curly brackets - expand outward */
+.btn-wrapper:hover .side-img-left img:first-child {
+  transform: translateX(-4px) scale(1.1);
+}
+
+.btn-wrapper:hover .side-img-right img:last-child {
+  transform: translateX(4px) scale(1.1) rotate(180deg);
+}
+
+/* Half circles - shrink inward */
+.btn-wrapper:hover .side-img-left img:last-child {
+  transform: translateX(2px) scaleX(1.2);
+}
+
+.btn-wrapper:hover .side-img-right img:first-child {
+  transform: translateX(-2px) scaleX(1.2) rotate(180deg);
+}
+
+/* Glow on curly brackets only */
+.side-img img {
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.4s ease;
+}
+
+.btn-wrapper:hover .side-img-left img:first-child,
+.btn-wrapper:hover .side-img-right img:last-child {
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.85));
+}
+
+
+
+
+
+
+
+
+
+
+/* ?? */
+
+
+/* WRAPPER */
+.question_wrap {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* YOUR IMAGE */
+.question_mark {
+  width: 40px;
+  opacity: 0;
+  z-index: 2;
+}
+
+/* RIPPLE */
+.ripple-ring {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.ripple-ring.delay {
+  animation-delay: 0.6s;
+}
+
+/* ANIMATIONS */
+@keyframes qBreath {
+  0%,100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.1); opacity: 1; }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0.7);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+/* ACTIVE STATE */
+.question_wrap.active .question_mark {
+  opacity: 1;
+  animation: qBreath 3s ease-in-out infinite;
+}
+
+.question_wrap.active .ripple-ring {
+  opacity: 1;
+  animation: ripple 1.8s ease-out infinite;
+}
+
+
+
+
+
+
+
+
+
+/* circle glow */
+
+/* Make SVG transforms behave correctly */
+.glow_circle {
+  display: block;
+}
+
+/* IMPORTANT: transform now works on GROUPS */
+.glow_circle .circle {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: none;
+}
+
+/* INNER */
+.glow_circle .c1.active {
+  animation: breatheInner 4s ease-in-out infinite;
+}
+
+/* OUTER */
+.glow_circle .c2.active {
+  animation: breatheOuter 4.6s ease-in-out infinite;
+}
+
+@keyframes breatheInner {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02); /* now visible */
+  }
+}
+
+@keyframes breatheOuter {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04); /* slightly stronger outer */
+  }
+}
