@@ -500,7 +500,7 @@
             duration: 0.45,
             ease: "back.out(3)",
           },
-          i === 0 ? "+=0.1" : "<", // 👈 key logic
+          i === 0 ? "-=0.2" : "<", // 👈 key logic
         );
       });
       tl.fromTo(
@@ -534,7 +534,7 @@ tl.add(() => {
     el.classList.add('active');
   });
 });
-tl.fromTo('.long_icon', {autoAlpha:0, y:100}, {autoAlpha:1, y:0, duration:.4,ease:'power2.out'},"-=.3")
+tl.fromTo('.long_icon', {autoAlpha:0, y:50}, {autoAlpha:1, y:0, duration:.7,ease:'power2.out'},"-=.3")
     }
     playIntro();
     //   btn.addEventListener('click', playIntro);
